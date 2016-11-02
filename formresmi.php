@@ -56,7 +56,7 @@ include 'dbconfig.php';
                     <thead>
                         <tr>
                             <th style="color:black; background-color: white;text-align:center">&nbsp;</th>
-                            <th style="color:black; background-color: white;text-align:center">No</th>
+<!--                            <th style="color:black; background-color: white;text-align:center">No</th>-->
                             <th style="color:black; background-color: white;text-align:center">Kelas</th>
                             <th style="color:black; background-color: white;text-align:center">Senin</th>
                             <th style="color:black; background-color: white;text-align:center">Selasa</th>
@@ -69,7 +69,7 @@ include 'dbconfig.php';
                         <?php
                         $result = mysql_query("SELECT * FROM form ");
                         $indexinsert = 0;
-                     
+
                         $dServer = array();
                         $rows = array();
                         while ($row = mysql_fetch_assoc($result)) {
@@ -80,9 +80,8 @@ include 'dbconfig.php';
                         var nomor = 1;
                         var rows = <?php echo json_encode($rows); ?>;
                         var rows_arr = rows.toString().split(',');
-                        for (var i = 0, nomor=1; i < rows_arr.length; nomor++,  i++) {
+                        for (var i = 0; i < rows_arr.length; i++) {
                             document.write("<tr><td><input type='checkbox' class='cekas' name='cek[] id='cek[]'  value='" + rows[i]['id'] + "'  /></th>",
-                                    "<td>"+nomor+"</td>",
                                     "<td><input type='text' value='" + rows[i]['kelas'] + "' style='width:60px;' name='kelasas[]'></th>",
                                     "<td><input type='text' value='" + rows[i]['senin'] + "'style='width:260px;'  name='seninas[]'><ul><li><input type='text' value='" + rows[i]['detail'] + "'style='width:100%;' name='detailas[]'></li></ul></td>",
                                     "<td><input type='text' value='" + rows[i]['selasa'] + "'style='width:100%;' name='selasaas[]'></td>",
