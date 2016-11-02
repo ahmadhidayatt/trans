@@ -1,0 +1,42 @@
+.list-group-item{
+    border: none;   
+}
+.list-group li a:hover{
+    text-decoration: none;
+
+}
+li{
+    list-style: none;
+}
+a{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+.table td {
+    border: none; 
+}
+
+#example input{
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.list-group-item input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px dotted black;
+
+}
+h2{
+
+    margin-top: 140px;
+    margin-bottom: -100px;
+    float: right;
+}
+input[type="text"] {
+    text-align: center;
+}
